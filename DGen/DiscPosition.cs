@@ -27,5 +27,12 @@ namespace DGen
                  Math.Sin(this.Azimuth)*Math.Sin(that.Azimuth))
                 );
         }
+
+        bool IsInside(BoundingBox box)
+        {
+            return box.Azimuth.Contains(Azimuth)
+                   && box.Radius.Contains(Radius)
+                   && box.Inclination.Contains(Inclination);
+        }
     }
 }

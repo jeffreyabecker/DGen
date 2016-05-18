@@ -40,17 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoundingBox.cs" />
     <Compile Include="DiscGenerator.cs" />
     <Compile Include="Climate.cs" />
     <Compile Include="Culture.cs" />
     <Compile Include="DgPhase.cs" />
     <Compile Include="Disc.cs" />
     <Compile Include="DiscPosition.cs" />
-    <Compile Include="DiscRadius.cs" />
+    <Compile Include="Sizing\DiscRadius.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Politics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Range.cs" />
+    <Compile Include="Sizing\ICanHazRadiusRange.cs" />
+    <Compile Include="Sizing\CanHazRadiusRange.cs" />
+    <Compile Include="Sizing\WorldSizer.cs" />
+    <Compile Include="Sizing\WorldSizerFactory.cs" />
     <Compile Include="Sophistication.cs" />
     <Compile Include="Verse.cs" />
   </ItemGroup>
