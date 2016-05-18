@@ -15,6 +15,7 @@ namespace DGen
         {
             var inc = Math.Abs(disc.Position.Inclination);
             disc.Radius = verse.Rng.NextDouble(MinimumDiscRadius * MinScaleFactor(inc), MaximumDiscRadius*MaxScaleFactor(inc));
+            disc.Radius = Math.Ceiling(disc.Radius);
         }
 
         private double MinScaleFactor(double inc)
@@ -29,5 +30,5 @@ namespace DGen
 
   
 
-    }
+    }70000/53
 }
