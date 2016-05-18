@@ -18,7 +18,7 @@ namespace DGen
         // apply biases from existing collection when
         // picking next DGPhase
 
-
+        /*
         public bool TooCloseToAnotherDisc(Disc disc, Verse verse)
         {
             //TODO: Check the 'Verse to make sure we're not overlapping
@@ -70,5 +70,6 @@ namespace DGen
                 MinimumDistance = (otherRadius) => Math.Max((otherRadius*1.8), otherRadius + DiscRadius.MinimumDiscRadius*2)
             },
         };
+        */
     }
 }

@@ -7,8 +7,6 @@
         public Culture Culture { get; set; }
         public Politics Politics { get; set; }
         public Sophistication Sophistication { get; set; }
-        public double Distance(Disc that)
-        {
-        }
+        
     }
 }
