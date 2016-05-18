@@ -4,47 +4,28 @@
 # User-specific files
 *.suo
 *.user
-*.userosscache
 *.sln.docstates
 
-# User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
-
 # Build results
+
 [Dd]ebug/
-[Dd]ebugPublic/
 [Rr]elease/
-[Rr]eleases/
 x64/
-x86/
 build/
-bld/
 [Bb]in/
 [Oo]bj/
-
-# Visual Studio 2015 cache/options directory
-.vs/
+builds/working
+builds/*
+# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
+!packages/*/build/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
-
-# NUNIT
-*.VisualState.xml
-TestResult.xml
-
-# Build Results of an ATL Project
-[Dd]ebugPS/
-[Rr]eleasePS/
-dlldata.c
-
-# DNX
-project.lock.json
-artifacts/
+.vs/*
 
 *_i.c
 *_p.c
-*_i.h
 *.ilk
 *.meta
 *.obj
@@ -64,11 +45,8 @@ artifacts/
 *.vssscc
 .builds
 *.pidb
-*.svclog
+*.log
 *.scc
-
-# Chutzpah Test files
-_Chutzpah*
 
 # Visual C++ cache files
 ipch/
@@ -83,19 +61,12 @@ ipch/
 *.vsp
 *.vspx
 
-# TFS 2012 Local Workspace
-$tf/
-
 # Guidance Automation Toolkit
 *.gpState
 
 # ReSharper is a .NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper
-*.DotSettings.user
-
-# JustCode is a .NET coding add-in
-.JustCode
 
 # TeamCity is a build add-in
 _TeamCity*
@@ -104,15 +75,8 @@ _TeamCity*
 *.dotCover
 
 # NCrunch
-_NCrunch_*
+*.ncrunch*
 .*crunch*.local.xml
-
-# MightyMoose
-*.mm.*
-AutoTest.Net/
-
-# Web workbench (sass)
-.sass-cache/
 
 # Installshield output folder
 [Ee]xpress/
@@ -127,86 +91,103 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 
-# Click-Once directory
-publish/
+# this log file probably doesn't need to be sent through
+sds
 
-# Publish Web Output
-*.[Pp]ublish.xml
-*.azurePubxml
-## TODO: Comment the next line if you want to checkin your
-## web deploy settings but do note that will include unencrypted
-## passwords
-#*.pubxml
 
-*.publishproj
+# NuGet Packages Directory
+packages/
+## TODO: If the tool you use requires repositories.config uncomment the next line
+!packages/repositories.config
 
-# NuGet Packages
-*.nupkg
-# The packages folder can be ignored because of Package Restore
-**/packages/*
-# except build/, which is used as an MSBuild target.
-!**/packages/build/
-# Uncomment if necessary however generally it will be regenerated when needed
-#!**/packages/repositories.config
 
 # Windows Azure Build Output
-csx/
+csx
 *.build.csdef
 
 # Windows Store app package directory
 AppPackages/
 
-# Visual Studio cache files
-# files ending in .cache can be ignored
-*.[Cc]ache
-# but keep track of directories ending in .cache
-!*.[Cc]ache/
-
 # Others
+sql/
+*.Cache
 ClientBin/
 [Ss]tyle[Cc]op.*
 ~$*
 *~
 *.dbmdl
-*.dbproj.schemaview
 *.pfx
-*.publishsettings
-node_modules/
-orleans.codegen.cs
+*.bak
+
+# Currently Unused Projects and Folders
+UnitTests/
+DelDOTPlanningReview_v2/App_Start/
+AutomatedBuild.*
 
 # RIA/Silverlight projects
 Generated_Code/
 
-# Backup & report files from converting an old project file
-# to a newer Visual Studio version. Backup files are not needed,
-# because we have git ;-)
+# Backup & report files from converting an old project file to a newer
+# Visual Studio version. Backup files are not needed, because we have git ;-)
 _UpgradeReport_Files/
 Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
 # SQL Server files
-*.mdf
-*.ldf
+App_Data/*.mdf
+App_Data/*.ldf
 
-# Business Intelligence projects
-*.rdl.data
-*.bim.layout
-*.bim_*.settings
+# TeX compilation and output files
+Documents/**/*.aux
+Documents/**/*.dvi
+Documents/**/*.out
+Documents/**/*.pdf
+Documents/**/*.toc
 
-# Microsoft Fakes
-FakesAssemblies/
-
-# Node.js Tools for Visual Studio
-.ntvs_analysis.dat
-
-# Visual Studio 6 build log
-*.plg
-
-# Visual Studio 6 workspace options file
-*.opt
-
-# LightSwitch generated files
+#LightSwitch generated files
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+# =========================
+# Windows detritus
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store
+
+.sass-cache
+DelDOTPlanningReview_V2.Business.Services/App_Data/Elmah/
+DelDOTPlanningReview_V2.Business.Services/App_Data/BlobStore/
+DelDotPdca/App_Data/Elmah/
+
+#DON'T Ignore these files
+!/**/widgets/debug/
+#!/DelDotPdca/Areas/Internal/Map/gov/sha/widgets/debug/
+#!/DelDOTPlanningReview/Map/gov/sha/widgets/debug/
+
+#files uploaded by other users
+/DelDotPdca/App_Data/FileUploads/
+
+#ignore node_modules folder
+/node_modules/
+
+/DelDotPdca/App_Data/*
+/DelDotPdca/pdca.js
+/DelDotPdca/pdca.js.map
+/DelDotPdca/pdca.appui.js
+/DelDotPdca/pdca.appui.js.map
+
+#Ignore the documentation folder - the someone can build this if they want to
+/Docs
